@@ -23,7 +23,7 @@ public class GamblingSimulatorProgram {
             Every_Day_Stack = 100;
             while (Every_Day_Stack > Stack_Lower && Every_Day_Stack < Stack_Upper) {
                 double random = Math.floor(Math.random() * 10) % 2;
-
+//
                 if (random == 1) {
                     Win = 1;
                     Every_Day_Stack = Every_Day_Stack + Win;
@@ -50,11 +50,10 @@ public class GamblingSimulatorProgram {
                 System.out.println("lossing amt per day:" + lossing);
                 System.out.println("total amount remaining : " + Every_Day_Stack);
             }
-            if (Every_Day_Stack > 50)
-            {
-                System.out.println("luckiest day:" +day);
+            if (Every_Day_Stack > 50) {
+                System.out.println("luckiest day:" + day);
             } else if (Every_Day_Stack <= 50) {
-                System.out.println("unluckiest day:" +day);
+                System.out.println("unluckiest day:" + day);
 
             }
 
@@ -68,5 +67,19 @@ public class GamblingSimulatorProgram {
         System.out.println("Total Win Days: " + WinDays + "total amount win days amount: " + Winning * WinDays);
         System.out.println("Total Loss Days: " + LossDays + "total amount loss day amount: " + lossing * LossDays);
 
+        if (+Winning * WinDays > lossing * LossDays) {
+            System.out.println("continue playing for next month");
+        } else {
+            System.out.println("stop playing for next month");
+        }
+
     }
 }
+
+
+
+
+
+
+
+
